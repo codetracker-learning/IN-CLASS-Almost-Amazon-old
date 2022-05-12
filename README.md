@@ -32,7 +32,7 @@ We will be learning about the following:
 
 ## TODO 1 - Get Setup
 In preparation for next week, complete the following in lab:
-- [Firebase Walkthrough Videos ~15 minutes](https://vimeo.com/showcase/codetracker-firebase) PW: `firebaseRules!`
+- [Firebase Walkthrough Videos ~15 minutes](https://vimeo.com/showcase/codetracker-firebase)
   - Create a project called `Almost Amazon`
   - Add a Realtime Database
   - Create an app called `Almost Amazon`
