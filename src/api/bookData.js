@@ -1,61 +1,28 @@
-import axios from 'axios';
-import firebaseConfig from './apiKeys';
+// import axios from 'axios';
+// import firebaseConfig from './apiKeys';
 // API CALLS FOR BOOKS
 
-const dbUrl = firebaseConfig.databaseURL;
+// const dbUrl = firebaseConfig.databaseURL;
 
-// GET BOOKS
-const getBooks = (userId) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/books.json?orderBy="uid"&equalTo="${userId}"`)
-    .then((response) => resolve(Object.values(response.data)))
-    .catch((error) => reject(error));
-});
+// TODO: GET BOOKS
+const getBooks = () => {};
 
-// DELETE BOOK
-const deleteBook = (firebaseKey, userId) => new Promise((resolve, reject) => {
-  axios.delete(`${dbUrl}/books/${firebaseKey}.json`)
-    .then(() => {
-      getBooks(userId).then(resolve);
-    })
-    .catch(reject);
-});
+// TODO: DELETE BOOK
+const deleteBook = () => {};
 
-// GET SINGLE BOOK
-const getSingleBook = (firebaseKey) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/books/${firebaseKey}.json`)
-    .then((response) => resolve(response.data))
-    .catch(reject);
-});
+// TODO: GET SINGLE BOOK
+const getSingleBook = () => {};
 
-// CREATE BOOK
-const createBook = (bookObj) => new Promise((resolve, reject) => {
-  axios.post(`${dbUrl}/books.json`, bookObj)
-    .then((response) => {
-      const body = { firebaseKey: response.data.name };
-      axios.patch(`${dbUrl}/books/${response.data.name}.json`, body)
-        .then(() => {
-          getBooks(bookObj.uid).then(resolve);
-        });
-    }).catch((error) => reject(error));
-});
+// TODO: CREATE BOOK
+const createBook = () => {};
 
-// UPDATE BOOK
-const updateBook = (bookObj) => new Promise((resolve, reject) => {
-  axios.patch(`${dbUrl}/books/${bookObj.firebaseKey}.json`, bookObj)
-    .then(() => getBooks(bookObj.uid).then(resolve))
-    .catch(reject);
-});
+// TODO: UPDATE BOOK
+const updateBook = () => {};
 
-// SEARCH BOOKS
+// TODO: FILTER BOOKS ON SALE
+const booksOnSale = () => {};
 
-// FILTER BOOKS ON SALE
-const booksOnSale = (userId) => new Promise((resolve, reject) => {
-  getBooks(userId)
-    .then((userBooksArray) => {
-      const onSaleBooks = userBooksArray.filter((book) => book.sale);
-      resolve(onSaleBooks);
-    }).catch(reject);
-});
+// TODO: STRETCH...SEARCH BOOKS
 
 export {
   getBooks,
