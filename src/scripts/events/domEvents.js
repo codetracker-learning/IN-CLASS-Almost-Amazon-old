@@ -2,12 +2,12 @@ import addBookForm from '../components/forms/addBookForm';
 import {
   deleteBook,
   getSingleBook,
-} from '../helpers/data/bookData';
+} from '../../api/bookData';
 import { showBooks } from '../components/books';
 import addAuthorForm from '../components/forms/addAuthorForm';
 import { showAuthors } from '../components/authors';
 import viewBook from '../components/viewBook';
-import { viewBookDetails, deleteAuthorBooks } from '../helpers/data/mergedData';
+import { viewBookDetails, deleteAuthorBooks } from '../../api/mergedData';
 
 const domEvents = (uid) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import firebaseConfig from '../../../api/apiKeys';
+import firebaseConfig from './apiKeys';
 // API CALLS FOR BOOKS
 
 const dbUrl = firebaseConfig.databaseURL;

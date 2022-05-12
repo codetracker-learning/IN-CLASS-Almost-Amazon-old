@@ -1,4 +1,4 @@
-import { getAuthors } from '../../helpers/data/authorData';
+import { getAuthors } from '../../../api/authorData';
 
 const selectAuthor = (userId, authorId) => {
   let domString = `<label for="author">Select an Author</label>

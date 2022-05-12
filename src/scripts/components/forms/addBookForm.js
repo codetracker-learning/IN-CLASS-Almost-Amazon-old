@@ -1,4 +1,4 @@
-import clearDom from '../../helpers/data/clearDom';
+import clearDom from '../../helpers/clearDom';
 import selectAuthor from './selectAuthor';
 
 const addBookForm = (userId, obj = {}) => {

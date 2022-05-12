@@ -1,4 +1,4 @@
-import clearDom from '../helpers/data/clearDom';
+import clearDom from '../helpers/clearDom';
 
 const showAuthors = (array) => {
   clearDom();
