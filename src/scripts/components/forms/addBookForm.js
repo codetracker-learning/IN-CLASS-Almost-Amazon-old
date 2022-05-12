@@ -2,6 +2,7 @@ import clearDom from '../../helpers/clearDom';
 import renderToDOM from '../../helpers/renderToDom';
 import selectAuthor from './selectAuthor';
 
+// USING THIS FORM FOR BOTH CREATE AND UPDATE
 const addBookForm = (userId, obj = {}) => {
   clearDom();
   const domString = `

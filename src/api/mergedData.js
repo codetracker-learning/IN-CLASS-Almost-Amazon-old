@@ -18,8 +18,8 @@ import {
 //     }).catch(reject);
 // });
 
-const viewBookDetails = async (bookFirebasekey) => {
-  const bookObject = await getSingleBook(bookFirebasekey);
+const viewBookDetails = async (bookFirebaseKey) => {
+  const bookObject = await getSingleBook(bookFirebaseKey);
   const authorObject = await getSingleAuthor(bookObject.author_id);
 
   return { authorObject, ...bookObject };
