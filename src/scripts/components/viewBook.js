@@ -1,9 +1,10 @@
 import clearDom from '../helpers/clearDom';
+import renderToDOM from '../helpers/renderToDom';
 
 const viewBook = (obj) => {
   clearDom();
 
-  document.querySelector('#view').innerHTML += `
+  const domString = `
   <div class="mt-5 d-flex flex-wrap">
    <div class="d-flex flex-column">
      <img src=${obj.image} alt=${obj.title} style="width: 300px;">
@@ -21,6 +22,8 @@ const viewBook = (obj) => {
        $${obj.price}` : `$${obj.price}`}</p>      
       </div>
     </div>`;
+
+  renderToDOM('#view', domString);
 };
 
 export default viewBook;

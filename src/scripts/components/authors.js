@@ -1,12 +1,16 @@
 import clearDom from '../helpers/clearDom';
+import renderToDOM from '../helpers/renderToDom';
 
 const showAuthors = (array) => {
   clearDom();
 
-  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-author-btn">Add An Author</button>';
+  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-author-btn">Add An Author</button>';
 
+  renderToDOM('#add-button', btnString);
+
+  let domString = '';
   array.forEach((item) => {
-    document.querySelector('#store').innerHTML += `
+    domString += `
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">${item.first_name} ${item.last_name}</h5>
@@ -19,10 +23,12 @@ const showAuthors = (array) => {
     </div>
     `;
   });
+  renderToDOM('#store', domString);
 };
 
 const emptyAuthors = () => {
-  document.querySelector('#store').innerHTML = '<h1>No Authors</h1>';
+  const domString = '<h1>No Authors</h1>';
+  renderToDOM('#store', domString);
 };
 
 export { showAuthors, emptyAuthors };

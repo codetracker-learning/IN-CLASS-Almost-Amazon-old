@@ -1,9 +1,10 @@
 import clearDom from '../../helpers/clearDom';
+import renderToDOM from '../../helpers/renderToDom';
 import selectAuthor from './selectAuthor';
 
 const addBookForm = (userId, obj = {}) => {
   clearDom();
-  document.querySelector('#form-container').innerHTML = `
+  const domString = `
     <form id="${obj.firebaseKey ? `update-book--${obj.firebaseKey}` : 'submit-book'}" class="mb-4">
       <div class="form-group">
         <label for="title">Book Title</label>
@@ -31,6 +32,7 @@ const addBookForm = (userId, obj = {}) => {
       </button>
     </form>`;
 
+  renderToDOM('#form-container', domString);
   selectAuthor(userId, `${obj.author_id || ''}`);
 };
 

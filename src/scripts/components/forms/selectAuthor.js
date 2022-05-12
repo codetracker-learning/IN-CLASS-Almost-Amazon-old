@@ -1,4 +1,5 @@
 import { getAuthors } from '../../../api/authorData';
+import renderToDOM from '../../helpers/renderToDom';
 
 const selectAuthor = (userId, authorId) => {
   let domString = `<label for="author">Select an Author</label>
@@ -17,7 +18,7 @@ const selectAuthor = (userId, authorId) => {
 
     domString += '</select>';
 
-    document.querySelector('#select-author').innerHTML = domString;
+    renderToDOM('#select-author', domString);
   });
 };
 

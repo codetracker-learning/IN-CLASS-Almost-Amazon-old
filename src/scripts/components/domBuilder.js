@@ -1,5 +1,7 @@
+import renderToDOM from '../helpers/renderToDom';
+
 const domBuilder = () => {
-  document.querySelector('#app').innerHTML = `
+  const domString = `
   <div id="navigation"></div>
   <div id="main-container">
     <div id="add-button"></div>
@@ -7,6 +9,8 @@ const domBuilder = () => {
     <div id="store"></div>
     <div id="view"></div>
   </div>`;
+
+  renderToDOM('#app', domString);
 };
 
 export default domBuilder;

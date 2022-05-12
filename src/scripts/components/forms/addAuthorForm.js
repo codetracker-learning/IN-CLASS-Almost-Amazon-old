@@ -1,8 +1,9 @@
 import clearDom from '../../helpers/clearDom';
+import renderToDOM from '../../helpers/renderToDom';
 
 const addAuthorForm = () => {
   clearDom();
-  document.querySelector('#form-container').innerHTML = `
+  const domString = `
     <form id="submit-author" class="mb-4">
       <div class="form-group">
         <label for="image">First Name</label>
@@ -18,6 +19,8 @@ const addAuthorForm = () => {
       </div>
       <button type="submit" class="btn btn-primary mt-3">Submit Author</button>
     </form>`;
+
+  renderToDOM('#form-container', domString);
 };
 
 export default addAuthorForm;
