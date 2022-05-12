@@ -1,11 +1,11 @@
-import { showBooks } from './components/pages/books';
-import logoutButton from './components/buttons/logoutButton';
-import domBuilder from './components/domBuilder';
-import navBar from './components/navBar';
-import domEvents from './events/domEvents';
-import formEvents from './events/formEvents';
-import navigationEvents from './events/navigationEvents';
-import { getBooks } from '../api/bookData';
+import { showBooks } from '../components/pages/books';
+import logoutButton from '../components/buttons/logoutButton';
+import domBuilder from '../components/domBuilder';
+import navBar from '../components/navBar';
+import domEvents from '../events/domEvents';
+import formEvents from '../events/formEvents';
+import navigationEvents from '../events/navigationEvents';
+import { getBooks } from '../../api/bookData';
 
 const startApp = (user) => {
   domBuilder(); // BUILD THE DOM
