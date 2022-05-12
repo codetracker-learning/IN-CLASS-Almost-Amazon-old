@@ -1,8 +1,6 @@
 # Almost Amazon
 We are building an admin app that allows a store owner to login to the app and manage books and authors.
 
-[OPEN Deployed Sample](https://almost-amazon-sample.netlify.app/) (READ ONLY 🤓)
-
 [User Restricted Deplyed Sample](https://almost-amazon-webpack5.netlify.app/#)
 
 ![Screen Shot](./aass.png)
@@ -32,7 +30,7 @@ We will be learning about the following:
 
 ## TODO 1 - Get Setup
 In preparation for next week, complete the following in lab:
-- [Firebase Walkthrough Videos ~15 minutes](https://vimeo.com/showcase/codetracker-firebase) PW: `firebaseRules!`
+- [Firebase Walkthrough Videos ~15 minutes](https://vimeo.com/showcase/codetracker-firebase)
   - Create a project called `Almost Amazon`
   - Add a Realtime Database
   - Create an app called `Almost Amazon`
@@ -70,8 +68,6 @@ In preparation for next week, complete the following in lab:
 ## TODO 3 - Installs
 - Install [Postman](https://www.postman.com/downloads/)
 
-
-
 ## Technologies used
 - Javascript
 - Firebase Auth
@@ -79,4 +75,4 @@ In preparation for next week, complete the following in lab:
 - Axios for XHR requests
 - SASS (For your own exploration)
 - Bootstrap 5
-- Webpack
+- Webpack 5
