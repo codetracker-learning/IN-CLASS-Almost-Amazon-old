@@ -1,6 +1,6 @@
 import { createBook, updateBook } from '../../api/bookData';
-import { showBooks } from '../components/books';
-import { showAuthors } from '../components/authors';
+import { showBooks } from '../components/pages/books';
+import { showAuthors } from '../components/pages/authors';
 import { createAuthor } from '../../api/authorData';
 
 const formEvents = (uid) => {

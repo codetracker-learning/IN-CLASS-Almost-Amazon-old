@@ -1,5 +1,5 @@
-import { showAuthors } from '../components/authors';
-import { showBooks } from '../components/books';
+import { showAuthors } from '../components/pages/authors';
+import { showBooks } from '../components/pages/books';
 import signOut from '../helpers/auth/signOut';
 import { getAuthors } from '../../api/authorData';
 import { booksOnSale, getBooks } from '../../api/bookData';

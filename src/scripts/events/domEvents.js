@@ -3,10 +3,10 @@ import {
   deleteBook,
   getSingleBook,
 } from '../../api/bookData';
-import { showBooks } from '../components/books';
+import { showBooks } from '../components/pages/books';
 import addAuthorForm from '../components/forms/addAuthorForm';
-import { showAuthors } from '../components/authors';
-import viewBook from '../components/viewBook';
+import { showAuthors } from '../components/pages/authors';
+import viewBook from '../components/pages/viewBook';
 import { viewBookDetails, deleteAuthorBooks } from '../../api/mergedData';
 
 const domEvents = (uid) => {
