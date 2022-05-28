@@ -39,16 +39,6 @@ const formEvents = (uid) => {
     }
 
     // ADD CLICK EVENT FOR SUBMITTING FORM FOR ADDING AN AUTHOR
-    if (e.target.id.includes('submit-author')) {
-      const authorObject = {
-        email: document.querySelector('#email').value,
-        first_name: document.querySelector('#first_name').value,
-        last_name: document.querySelector('#last_name').value,
-        uid
-      };
-
-      createAuthor(authorObject).then(showAuthors);
-    }
     // ADD CLICK EVENT FOR EDITING AN AUTHOR
   });
 };

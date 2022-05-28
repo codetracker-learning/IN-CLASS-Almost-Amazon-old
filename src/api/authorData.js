@@ -1,53 +1,31 @@
-// API CALLS FOR AUTHORS
-import axios from 'axios';
-import firebaseConfig from './apiKeys';
-// API CALLS FOR BOOKS
+// import axios from 'axios';
+// import firebaseConfig from './apiKeys';
 
-const dbUrl = firebaseConfig.databaseURL;
-// GET AUTHOR
-const getAuthors = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/authors.json?orderBy="uid"&equalTo="${uid}"`)
-    .then((response) => resolve(Object.values(response.data)))
-    .catch((error) => reject(error));
-});
+// const dbUrl = firebaseConfig.databaseURL;
 
-// DELETE AUTHOR
-// CREATE AUTHOR
-const createAuthor = (authorObject) => new Promise((resolve, reject) => {
-  axios.post(`${dbUrl}/authors.json`, authorObject)
-    .then((response) => {
-      const body = { firebaseKey: response.data.name };
-      axios.patch(`${dbUrl}/authors/${response.data.name}.json`, body)
-        .then(() => {
-          getAuthors(authorObject.uid).then(resolve);
-        });
-    }).catch((error) => reject(error));
-});
+// FIXME:  GET ALL AUTHORS
+const getAuthors = () => {};
 
-const getSingleAuthor = (firebaseKey) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/authors/${firebaseKey}.json`)
-    .then((response) => resolve(response.data))
-    .catch(reject);
-});
+// FIXME: CREATE AUTHOR
+const createAuthor = () => {};
 
-// UPDATE AUTHOR
-const deleteSingleAuthor = (firebaseKey) => new Promise((resolve, reject) => {
-  axios.delete(`${dbUrl}/authors/${firebaseKey}.json`)
-    .then(() => {
-      getAuthors().then(resolve);
-    }).catch(reject);
-});
-// SEARCH AUTHORS
-const getAuthorBooks = (authorId) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/books.json?orderBy="author_id"&equalTo="${authorId}"`)
-    .then((response) => resolve(Object.values(response.data)))
-    .catch(reject);
-});
+// FIXME: GET SINGLE AUTHOR
+const getSingleAuthor = () => {};
+
+// FIXME: DELETE AUTHOR
+const deleteSingleAuthor = () => {};
+
+// FIXME: UPDATE AUTHOR
+const updateAuthor = () => {};
+
+// TODO: GET A SINGLE AUTHOR'S BOOKS
+const getAuthorBooks = () => {};
 
 export {
   getAuthors,
   createAuthor,
   getSingleAuthor,
   deleteSingleAuthor,
-  getAuthorBooks
+  updateAuthor,
+  getAuthorBooks,
 };
