@@ -29,7 +29,7 @@ const deleteAuthorBooks = (authorId) => new Promise((resolve, reject) => {
   getAuthorBooks(authorId).then((authorsBookArray) => {
     const deleteBooks = authorsBookArray.map((book) => deleteBook(book.firebaseKey));
 
-    // GET some dinner
+    // DELETE all books that belong to an author
     Promise.all([...deleteBooks]).then(() => resolve(deleteSingleAuthor(authorId)));
   }).catch(reject);
 });
