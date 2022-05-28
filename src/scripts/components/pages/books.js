@@ -26,7 +26,12 @@ const showBooks = (array) => {
 };
 
 const emptyBooks = () => {
-  document.querySelector('#store').innerHTML = '<h1>No Items</h1>';
+  clearDom();
+  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-book-btn">Add A Book</button>';
+  renderToDOM('#add-button', btnString);
+
+  const domString = '<h1>No Items</h1>';
+  renderToDOM('#store', domString);
 };
 
 export { showBooks, emptyBooks };
