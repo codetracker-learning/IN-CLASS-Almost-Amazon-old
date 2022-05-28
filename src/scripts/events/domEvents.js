@@ -15,8 +15,6 @@ const domEvents = (uid) => {
     if (e.target.id.includes('delete-book')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
-        // console.warn('CLICKED DELETE BOOK', e.target.id);
-        // console.warn(e.target.id.split('--'));
         const [, id] = e.target.id.split('--');
 
         deleteBook(id, uid).then(showBooks);
@@ -42,14 +40,6 @@ const domEvents = (uid) => {
     }
 
     // ADD CLICK EVENT FOR DELETING AN AUTHOR
-    if (e.target.id.includes('delete-author-btn')) {
-      // eslint-disable-next-line no-alert
-      if (window.confirm('Want to delete?')) {
-        const [, firebaseKey] = e.target.id.split('--');
-        deleteAuthorBooks(firebaseKey).then(showAuthors);
-      }
-    }
-
     // ADD CLICK EVENT FOR SHOWING FORM FOR ADDING AN AUTHOR
     // ADD CLICK EVENT FOR EDITING AN AUTHOR
   });
