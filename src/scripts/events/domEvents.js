@@ -51,9 +51,6 @@ const domEvents = (uid) => {
     }
 
     // ADD CLICK EVENT FOR SHOWING FORM FOR ADDING AN AUTHOR
-    if (e.target.id.includes('add-author-btn')) {
-      addAuthorForm();
-    }
     // ADD CLICK EVENT FOR EDITING AN AUTHOR
   });
 };
