@@ -1,6 +1,11 @@
 import clearDom from '../../helpers/clearDom';
 import renderToDOM from '../../helpers/renderToDom';
 
+const emptyAuthors = () => {
+  const domString = '<h1>No Authors</h1>';
+  renderToDOM('#store', domString);
+};
+
 const showAuthors = (array) => {
   clearDom();
 
@@ -23,11 +28,6 @@ const showAuthors = (array) => {
     </div>
     `;
   });
-  renderToDOM('#store', domString);
-};
-
-const emptyAuthors = () => {
-  const domString = '<h1>No Authors</h1>';
   renderToDOM('#store', domString);
 };
 
