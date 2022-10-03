@@ -65,9 +65,6 @@ In preparation for next week, complete the following in lab:
     - Look at the components, events, helpers, and views
     - Checkout `main.scss` 
 
-## TODO 3 - Installs
-- Install [Postman](https://www.postman.com/downloads/)
-
 ## Technologies used
 - Javascript
 - Firebase Auth
